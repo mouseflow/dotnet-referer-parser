@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -183,7 +183,7 @@ namespace RefererParser
         {
             var @params = HttpUtility.ParseQueryString(refererUri.Query);
 
-            foreach (string key in @params.AllKeys.Where(k => !string.IsNullOrWhiteSpace(k)))
+            foreach (string key in @params.AllKeys.Where(k => !string.IsNullOrEmpty(k)))
             {
                 if (possibleParameters.Contains(key.ToLower()))
                 {
